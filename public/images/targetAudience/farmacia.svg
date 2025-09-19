@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="26.4161mm" height="26.4161mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1471.84 1471.84"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:url(#id1);fill-rule:nonzero}
+   ]]>
+  </style>
+    <clipPath id="id0">
+     <path d="M-0 0l1471.84 0 0 1471.84 -1471.84 0 0 -1471.84z"/>
+    </clipPath>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="-1323.79" y1="1517.36" x2="-1323.76" y2="-234.57">
+   <stop offset="0" style="stop-opacity:1; stop-color:#367BB2"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:white"/>
+  </linearGradient>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_105553241815424">
+   <g style="clip-path:url(#id0)">
+    <image x="-0" y="0" width="1471.84" height="1471.84" xlink:href="farmacia_Images/farmacia_ImgID1.png"/>
+   </g>
+  </g>
+  <path class="fil0" d="M343.99 122.65l783.86 0c60.89,0 116.23,24.89 156.34,65 40.11,40.11 65,95.44 65,156.34l0 783.86c0,60.88 -24.89,116.23 -65,156.34 -40.11,40.1 -95.44,65 -156.34,65l-783.86 0c-60.89,0 -116.23,-24.9 -156.34,-65 -40.1,-40.11 -65,-95.45 -65,-156.34l0 -783.86c0,-60.89 24.9,-116.23 65,-156.34 40.11,-40.11 95.46,-65 156.34,-65zm577.04 990.63l-370.22 0c-31.92,0 -58.03,-26.11 -58.03,-58.03l0 -354.54 55.25 -162.55c0.92,-0.04 1.85,-0.07 2.78,-0.07l370.22 0c1.4,0 2.8,0.05 4.17,0.14l53.86 158.48 0 358.53c0,31.92 -26.11,58.03 -58.03,58.03zm-350.02 -754.72l329.82 0c13.65,0 24.81,11.16 24.81,24.81l0 64.21c0,13.65 -11.16,24.81 -24.81,24.81l-329.82 0c-13.65,0 -24.81,-11.16 -24.81,-24.81l0 -64.21c0,-13.65 11.16,-24.81 24.81,-24.81zm106.21 645.43l117.4 0 0 -119.61 119.61 0 0 -117.4 -119.61 0 0 -119.61 -117.4 0 0 119.61 -119.61 0 0 117.4 119.61 0 0 119.61zm450.63 -834.17l-783.86 0c-47.87,0 -91.42,19.6 -122.99,51.17 -31.57,31.58 -51.17,75.11 -51.17,122.99l0 783.86c0,47.87 19.6,91.41 51.17,122.99 31.58,31.57 75.11,51.17 122.99,51.17l783.86 0c47.87,0 91.41,-19.6 122.99,-51.17 31.57,-31.57 51.17,-75.11 51.17,-122.99l0 -783.86c0,-47.87 -19.6,-91.42 -51.17,-122.99 -31.57,-31.57 -75.11,-51.17 -122.99,-51.17z"/>
+ </g>
+</svg>
