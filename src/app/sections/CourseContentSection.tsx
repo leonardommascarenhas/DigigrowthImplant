@@ -3,8 +3,7 @@ import path from "path";
 import Curve from "../components/Curve";
 import { Title } from "../components/Title";
 import { courseContent } from "../constants/index";
-
-import CourseCard from "../components/CourseCard";
+import CourseSwiper from "./CourseSwiper";
 
 const CourseContentSection = () => {
   const imagesDir = path.join(process.cwd(), "public", "images", "CourseContentSection");
@@ -72,6 +71,11 @@ const CourseContentSection = () => {
     },
   ];
 
+  const courses = imageFiles.map((file, index) => ({
+    file,
+    ...courseDetails[index],
+  }));
+
   return (
     <section className="relative px-4 pt-6 pb-28 lg:pb-48 text-cta-dark bg-[linear-gradient(to_bottom,var(--color-cta-secondary),var(--color-cta-third))]">
       <Curve type="convex" position="top" fill="#ffffff" height="60px" />
@@ -80,20 +84,7 @@ const CourseContentSection = () => {
         <Title title={courseContent.sectionTitle} color="text-white" />
       </div>
 
-      <div className="mt-6 mx-18 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-        {imageFiles.map((file, index) => {
-          const course = courseDetails[index] || {};
-          return (
-            <CourseCard
-              key={file}
-              file={file}
-              title={course.title || ""}
-              description={course.description || ""}
-              topics={course.topics || []}
-            />
-          );
-        })}
-      </div>
+      <CourseSwiper courses={courses} />
     </section>
   );
 };

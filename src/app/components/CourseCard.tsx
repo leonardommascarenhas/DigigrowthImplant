@@ -26,11 +26,11 @@ const CourseCard = ({ file, title, description, topics }: CourseCardProps) => {
           className="w-full transition-transform duration-500 group-hover:scale-105"
         />
 
-        <button
+        {/* <button
           onClick={() => setShowDescription(true)}
           className="absolute whitespace-nowrap min-w-[90px] bottom-6 left-1/2 -translate-x-1/2 bg-white/90 text-[#00134d] font-semibold text-xs sm:text-sm px-6 py-1.5 rounded-full backdrop-blur-md border border-white shadow-md transition-all duration-300 hover:scale-105 hover:-translate-y-1">
           Ver Mais
-        </button>
+        </button> */}
       </div>
 
       {/* Modal */}

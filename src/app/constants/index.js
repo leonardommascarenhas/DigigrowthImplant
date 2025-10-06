@@ -41,23 +41,32 @@ export const uniqueCourse = {
   sectionTitle: "O que torna essa formação única?",
   highlights: [
     {
-      title: "Treinamento 100% prático",
-      description: "Você aplicará as técnicas aprendidas em média 5 pacientes reais, com supervisão.",
+      title: "Motor, kit cirúrgico e kit protético fornecidos",
+      description:
+        "Todo o material necessário para as práticas está incluso, garantindo uma experiência completa e profissional desde o primeiro módulo.",
+      imageFile: "/images/motor-kit-cirurgico.jpg",
     },
     {
-      title: "Técnicas mais buscadas do mercado",
-      description: "Inclui toxina botulínica, preenchimento básico e bioestimuladores de colágeno.",
+      title: "Prática com paciente modelo e pacientes reais",
+      description:
+        "A formação inclui atendimento em todos os módulos, desde simulações em modelo até pacientes reais, desenvolvendo segurança clínica e técnica.",
+      imageFile: "/images/pacientes-reais.jpg",
     },
     {
-      title: "Mentoria com Milena Ferreira",
-      description: "Referência na área estética, com ampla experiência clínica e didática.",
+      title: "Fresh Frozen",
+      description:
+        "Práticas com material biológico fresco (Fresh Frozen), proporcionando uma vivência cirúrgica realista e de alto nível.",
+      imageFile: "/images/fresh-frozen.jpg",
     },
     {
-      title: "Turma Premium",
-      description: "Turmas reduzidas e foco total no seu desenvolvimento individual.",
+      title: "Técnicas exclusivas",
+      description:
+        "Aprenda e execute técnicas avançadas de cirurgia guiada, carga imediata e enxertos, dominando o que há de mais atual na Implantodontia moderna.",
+      imageFile: "/images/tecnicas-exclusivas.jpg",
     },
   ],
 };
+
 
 export const courseContent = {
   sectionTitle: "Conteúdo Programático",

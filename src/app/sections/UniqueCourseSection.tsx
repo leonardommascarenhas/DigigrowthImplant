@@ -8,9 +8,7 @@ import { motion, Variants, easeOut } from "framer-motion";
 const containerVariants: Variants = {
   hidden: {},
   visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
+    transition: { staggerChildren: 0.15 },
   },
 };
 
@@ -23,15 +21,6 @@ const titleVariants: Variants = {
   },
 };
 
-const imageVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.8, ease: easeOut },
-  },
-};
-
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -41,23 +30,26 @@ const itemVariants: Variants = {
   },
 };
 
+const imageVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.8, ease: easeOut },
+  },
+};
+
 const UniqueCourseSection = () => {
   return (
     <section className="bg-white p-4 max-w-7xl mx-auto leading-none">
       <motion.div
-        className="
-          flex flex-col gap-8 mt-10
-          lg:grid lg:grid-cols-[30%_70%] lg:grid-rows-[auto_auto_1fr] lg:gap-8
-        "
+        className="flex flex-col gap-8 mt-10"
         initial="hidden"
         animate="visible"
         variants={containerVariants}>
         {/* Título */}
         <motion.h2
-          className="
-            text-[1.78rem] md:text-4xl font-bold text-cta-third text-center
-            lg:text-left lg:col-start-2 lg:row-start-2
-          "
+          className="text-[1.78rem] md:text-4xl font-bold text-cta-third text-center lg:text-left"
           variants={titleVariants}>
           O que torna essa <br />
           <span className="block font-extrabold mt-0.5 text-cta-third">
@@ -65,40 +57,46 @@ const UniqueCourseSection = () => {
           </span>
         </motion.h2>
 
-        {/* Imagem */}
-        <motion.div
-          className="
-            relative w-full aspect-[3/4]
-            lg:aspect-auto lg:h-[40rem]
-            lg:col-start-1 lg:row-span-3
-            rounded-xl overflow-hidden shadow-md
-          "
-          variants={imageVariants}>
-          <Image
-            src="/images/copiaUnica.jpg"
-            alt="Formação única"
-            layout="fill"
-            objectFit="cover"
-            priority
-          />
-        </motion.div>
-
         {/* Destaques */}
         <motion.div
-          className="flex flex-col gap-4 lg:col-start-2 lg:row-start-3 px-4"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4"
           variants={containerVariants}>
-          {uniqueCourse.highlights.map((item, index) => (
-            <motion.div
-              key={index}
-              className="flex items-start gap-4 py-3.5 bg-gray-50 rounded-xl shadow-sm px-6"
-              variants={itemVariants}>
-              <FaCheckCircle className="text-green-500 mt-1 flex-shrink-0" size={20} />
-              <div className="text-[var(--color-cta-third)] text-base leading-relaxed">
-                <p className="font-semibold mb-1">{item.title}</p>
-                <p>{item.description}</p>
-              </div>
-            </motion.div>
-          ))}
+          {uniqueCourse.highlights.map(
+            (
+              item: { title: string; description: string; imageFile: string },
+              index: number
+            ) => (
+              <motion.div
+                key={index}
+                className="flex flex-col bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300"
+                variants={itemVariants}>
+                {/* Imagem do destaque */}
+                <motion.div
+                  className="relative w-full h-48 md:h-56 overflow-hidden"
+                  variants={imageVariants}>
+                  <Image
+                    src={item.imageFile}
+                    alt={item.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="hover:scale-105 transition-transform duration-500"
+                  />
+                </motion.div>
+
+                {/* Texto */}
+                <div className="flex items-start gap-3 px-5 py-4">
+                  <FaCheckCircle
+                    className="text-green-500 mt-1 flex-shrink-0"
+                    size={20}
+                  />
+                  <div className="text-[var(--color-cta-third)] text-base leading-relaxed">
+                    <p className="font-semibold mb-1">{item.title}</p>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            )
+          )}
         </motion.div>
       </motion.div>
     </section>
