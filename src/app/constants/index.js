@@ -1,28 +1,33 @@
 export const headerContent = {
-  logoUrl: "https://via.placeholder.com/300",
+  backgroundImage: "https://via.placeholder.com/1200x600", // substitua por uma foto impactante
   altText: "Faculdade CTA",
   title: `
-    <span class="block text-[2.1rem]">Treinamento avançado em</span>
-    <span class="block font-extrabold">HOF Premium</span>
+    <span class="block text-[2.1rem] font-extrabold">Especialização em</span>
+    <span class="block font-extrabold text-[2.4rem]">Implantodontia & Prótese Dentária</span>
+    <span class="block text-[1.3rem] font-semibold mt-1">Dupla Certificação</span>
   `,
   description: `
-    Curso presencial e intensivo<br/>
-    com foco <strong>100% prático</strong>
+    Formação presencial, completa e prática,<br/>
+    com certificação CTA e apenas <strong>12 vagas por turma</strong>.
   `,
-  ctaText: "Quero garantir minha vaga",
+  ctaText: "Quero me inscrever agora",
   ctaLink: "#inscricao",
 };
 
 export const courseDetails = {
-  sectionTitle: "Detalhes da Formação",
-  items: [
-    { label: "Data:", value: "8 a 10 Setembro; 13 a 15 Outubro; 10 a 12 Dezembro" },
-    { label: "Carga Horária:", value: "30 horas presenciais" },
-    { label: "Local:", value: "Salvador – BA" },
-    { label: "Certificação:", value: "Emitida pela Faculdade CTA" },
-    { label: "Vagas limitadas:", value: "Apenas 6 alunos por turma" },
+  sectionTitle: "Sobre o Curso",
+  description: `
+    A Faculdade CTA é referência em formação odontológica de alta performance,
+    oferecendo cursos com abordagem prática, corpo docente renomado e infraestrutura moderna.
+  `,
+  highlights: [
+    { label: "Modalidade:", value: "Presencial" },
+    { label: "Carga horária:", value: "1.400 horas" },
+    { label: "Unidades:", value: "Salvador • Feira de Santana • Aracaju" },
+    { label: "Certificação:", value: "CTA" },
   ],
 };
+
 
 export const targetAudience = {
   sectionTitle: "Curso para graduados em:",
