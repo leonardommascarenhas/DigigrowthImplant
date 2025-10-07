@@ -1,9 +1,9 @@
-import BackstageSection from "./sections/BackStageSection";
+// import BackstageSection from "./sections/BackStageSection";
 import CourseContentSection from "./sections/CourseContentSection";
 import CourseDetails from "./sections/CourseDetails";
 import EnrollmentSection from "./sections/EnrollmentSection";
 import Header from "./sections/Header";
-import TargetAudience from "./sections/TargetAudience";
+// import TargetAudience from "./sections/TargetAudience";
 import TeacherSection from "./sections/TeacherSection";
 // import StudentTestimonials from "./sections/Testimonials";
 import UniqueCourseSection from "./sections/UniqueCourseSection";
@@ -18,11 +18,11 @@ export default function Home() {
       <div className="w-screen">
         <Header />
         <CourseDetails />
-        <TargetAudience />
+        {/* <TargetAudience /> */}
         <UniqueCourseSection />
         <CourseContentSection />
         <TeacherSection />
-        <BackstageSection />
+        {/* <BackstageSection /> */}
         {/* <StudentTestimonials /> */}
         <TestimonialsSection />
         <EnrollmentSection />
