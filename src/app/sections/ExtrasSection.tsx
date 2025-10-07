@@ -10,10 +10,10 @@ import {
 } from "react-icons/fa";
 
 const ExtrasSection = () => {
-  const extrasData = {
-    materiaisInclusos: ["kits", "apostilas", "instrumentais"],
-    diferenciais: ["laboratórios", "centro de treinamento", "parcerias"],
-  };
+  // const extrasData = {
+  //   materiaisInclusos: ["kits", "apostilas", "instrumentais"],
+  //   diferenciais: ["laboratórios", "centro de treinamento", "parcerias"],
+  // };
 
   const sections = [
     {
