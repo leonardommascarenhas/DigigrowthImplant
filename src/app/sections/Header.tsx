@@ -9,7 +9,7 @@ const Header = () => {
       className="
         relative w-full h-[65vh] lg:h-screen
         bg-[url('/images/bannerPrincipalMobile.jpg')]
-        md:bg-[url('/images/bannerPrincipal.jpg')]
+        md:bg-[url('/images/bannerpincipal.jpg')]
         bg-cover bg-center md:bg-left bg-no-repeat
         text-cta-third font-light overflow-hidden
       "
