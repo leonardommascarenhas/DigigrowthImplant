@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import Curve from "../components/Curve";
 
@@ -32,16 +32,12 @@ export default function BackstageSection() {
         </h2>
 
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Pagination, Autoplay]}
           spaceBetween={16}
           slidesPerView={1}
           loop={true}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
-          navigation={{
-            prevEl: ".swiper-prev",
-            nextEl: ".swiper-next",
-          }}
           className="pb-8">
           {images.map((src, idx) => (
             <SwiperSlide key={idx}>
@@ -57,13 +53,6 @@ export default function BackstageSection() {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        <button className="swiper-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white text-black hover:bg-gray-200 rounded-full p-3 shadow z-10">
-          ◀︎
-        </button>
-        <button className="swiper-next absolute right-4 top-1/2 -translate-y-1/2 bg-white text-black hover:bg-gray-200 rounded-full p-3 shadow z-10">
-          ▶︎
-        </button>
       </div>
     </section>
   );

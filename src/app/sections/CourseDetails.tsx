@@ -18,7 +18,7 @@ const CourseDetails: React.FC = () => {
       <Title title={courseDetails.sectionTitle} />
 
       <div className="w-full lg:max-w-2xl mx-auto bg-gray-50 p-6 rounded-lg shadow-md border-l-8 border-blue-500">
-        <p className="mb-4 text-gray-700">{courseDetails.description}</p>
+        {/* <p className="mb-4 text-gray-700">{courseDetails.description}</p> */}
 
         <ul className="flex flex-col space-y-2">
           {courseDetails.highlights.map(

@@ -2,9 +2,9 @@ export const headerContent = {
   backgroundImage: "https://via.placeholder.com/1200x600", // substitua por uma foto impactante
   altText: "Faculdade CTA",
   title: `
-    <span class="block text-[2.1rem] font-extrabold">Especialização em</span>
-    <span class="block font-extrabold text-[2.4rem]">Implantodontia & Prótese Dentária</span>
-    <span class="block text-[1.3rem] font-semibold mt-1">Dupla Certificação</span>
+    <span class="block text-[1.7rem] font-extrabold">Especialização em</span>
+    <span class="block font-extrabold text-[1.8rem]">Implantodontia & Prótese Dentária</span>
+    <span class="block  font-semibold mt-1">Dupla Certificação</span>
   `,
   description: `
     Formação presencial, completa e prática,<br/>
