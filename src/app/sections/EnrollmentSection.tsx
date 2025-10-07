@@ -1,35 +1,51 @@
 import React from "react";
 import { Title } from "../components/Title";
-import { enrollmentInfo } from "../constants";
-import {
-  FaMoneyBillWave,
-  FaCreditCard,
-  FaUsers,
-  FaExclamationTriangle,
-} from "react-icons/fa";
+import { FaMoneyBillWave, FaCreditCard, FaUsers, FaTag, FaIdCard } from "react-icons/fa";
 import BlueButton from "../components/BlueButton";
 
 const EnrollmentSection = () => {
+  const enrollmentData = {
+    matricula: "R$ 200",
+    valorCurso: "R$ 1.600",
+    promocao: "R$ 1.200 até 5º dia útil",
+    formasPagamento: "todas",
+    vagasLimitadas: "apenas 12 por turma",
+  };
+
   const details = [
-    { icon: FaMoneyBillWave, label: "Valor:", value: enrollmentInfo.price },
+    {
+      icon: FaIdCard,
+      label: "Matrícula:",
+      value: enrollmentData.matricula,
+    },
+    {
+      icon: FaMoneyBillWave,
+      label: "Valor do curso:",
+      value: enrollmentData.valorCurso,
+    },
+    {
+      icon: FaTag,
+      label: "Promoção:",
+      value: enrollmentData.promocao,
+      highlight: true,
+    },
     {
       icon: FaCreditCard,
       label: "Formas de pagamento:",
-      value: enrollmentInfo.paymentMethods,
+      value: enrollmentData.formasPagamento,
     },
     {
       icon: FaUsers,
-      label: "Vagas extremamente limitadas:",
-      value: enrollmentInfo.limitedSpots,
+      label: "Vagas limitadas:",
+      value: enrollmentData.vagasLimitadas,
     },
-    { icon: FaExclamationTriangle, label: "", value: enrollmentInfo.urgencyText },
   ];
 
   return (
     <section
       id="inscricao"
       className="relative py-12 px-4 bg-[var(--color-neutral-gray)] font-nunito">
-      <Title title={enrollmentInfo.sectionTitle} />
+      <Title title="Investimento e Matrícula" />
       <div className="max-w-3xl mx-auto p-8 rounded-xl shadow-lg border-l-8 border-l-[var(--color-cta-secondary)] bg-[var(--color-neutral-white)]">
         <ul className="space-y-4">
           {details.map((item, index) => (
@@ -39,10 +55,10 @@ const EnrollmentSection = () => {
                 size={24}
               />
               <p className="text-[var(--color-cta-third)]">
-                {item.label && <strong className="font-semibold">{item.label}</strong>}{" "}
+                <strong className="font-semibold">{item.label}</strong>{" "}
                 <span
                   className={
-                    item.label ? "" : "font-semibold text-[var(--color-cta-accent)]"
+                    item.highlight ? "font-bold text-[var(--color-cta-accent)]" : ""
                   }>
                   {item.value}
                 </span>
@@ -53,7 +69,7 @@ const EnrollmentSection = () => {
       </div>
       <div className="text-center mt-8">
         <BlueButton
-          link={enrollmentInfo.whatsappLink}
+          link="https://wa.me/seu-numero-aqui"
           text="Falar com um consultor agora"
         />
       </div>
@@ -62,5 +78,3 @@ const EnrollmentSection = () => {
 };
 
 export default EnrollmentSection;
-
-//button gradient

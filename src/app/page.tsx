@@ -9,6 +9,8 @@ import TeacherSection from "./sections/TeacherSection";
 import UniqueCourseSection from "./sections/UniqueCourseSection";
 import TestimonialsSection from "./sections/TestimonialsSections";
 import WhatsAppButton from "./components/WhatsappButton";
+import ExtrasSection from "./sections/ExtrasSection";
+import FinalCTASection from "./sections/FinalCTASection";
 
 export default function Home() {
   return (
@@ -24,6 +26,8 @@ export default function Home() {
         {/* <StudentTestimonials /> */}
         <TestimonialsSection />
         <EnrollmentSection />
+        <ExtrasSection />
+        <FinalCTASection />
         <WhatsAppButton
           phone="5511999998888"
           message="Olá! Gostaria de saber mais sobre o curso."

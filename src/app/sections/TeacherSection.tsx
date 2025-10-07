@@ -37,7 +37,7 @@ const TeacherSection = () => {
             <div className="w-[280px] sm:w-[320px] md:w-[350px] lg:w-[400px] -mt-16">
               <Image
                 src={teacherInfo.teacherImage}
-                alt="Professora"
+                alt={teacherInfo.teacherName}
                 width={400}
                 height={600}
                 className="object-cover w-full h-auto"
@@ -55,14 +55,18 @@ const TeacherSection = () => {
             <Title title={teacherInfo.sectionTitle} />
           </motion.div>
 
-          {/* TEXTO */}
+          {/* NOME E DESCRIÇÃO */}
           <motion.div
-            className="text-lg leading-relaxed text-cta-dark -mt-6 relative z-30"
+            className="space-y-6 relative z-30"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
             viewport={{ once: true, amount: 0.4 }}>
-            <p className="text-[1.1rem] md:text-[1.25rem] font-light whitespace-pre-line">
+            <h3 className="text-2xl md:text-3xl font-bold text-cta-dark">
+              {teacherInfo.teacherName}
+            </h3>
+
+            <p className="text-base md:text-lg leading-relaxed text-cta-dark font-light whitespace-pre-line">
               {teacherInfo.teacherDescription}
             </p>
           </motion.div>

@@ -81,14 +81,13 @@ export const courseContent = {
 };
 
 export const teacherInfo = {
-  sectionTitle: "Sobre a professora",
-  teacherName: "Milena Ferreira",
-teacherDescription: `Enfermeira Dermatológica e Esteta, especialista em Docência do Ensino Superior, Harmonização Facial e Íntima Feminina. Com mais de 5 anos de atuação, é docente em cursos VIP, mentorias e pós-graduações em diversas capitais do Brasil, além de palestrante em grandes congressos nacionais.
-
-Desenvolveu técnicas exclusivas de botox, preenchimento labial e perfiloplastia — unindo experiência, didática e resultados naturais.`
-, 
-  imagePlaceholderText: "FOTO MILENA FERREIRA",
-  teacherImage: "/images/milena.png",
+  sectionTitle: "Sobre o Professor",
+  teacherName: "Prof. Dr. Tiago Cadidé",
+  teacherDescription: `Cirurgião-dentista especialista em Implantodontia e Harmonização Orofacial, Mestre e Doutorando em Implantodontia. Com mais de 20 anos coordenando cursos de pós-graduação em todo o Brasil, é referência nacional na formação de especialistas.
+Palestrante em grandes congressos nacionais, desenvolveu metodologias exclusivas de ensino que combinam excelência técnica, base científica sólida e aplicação prática voltada para resultados previsíveis e duradouros.`,
+  imagePlaceholderText: "FOTO TIAGO CADIDÉ",
+  teacherImage: "/images/thiago-cadide.jpg",
+  imageFile: "/images/thiago-cadide.jpg",
 };
 
 export const backstageInfo = {
