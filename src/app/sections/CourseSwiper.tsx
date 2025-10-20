@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import CourseCard from "../components/CourseCard";
 
 // Import Swiper styles
@@ -12,7 +12,7 @@ interface Course {
   file: string;
   title: string;
   description: string;
-  topics: string[];
+  topics?: string[];
 }
 
 interface CourseSwiperProps {
@@ -23,14 +23,10 @@ const CourseSwiper = ({ courses }: CourseSwiperProps) => {
   return (
     <div className="mt-12 w-full">
       <Swiper
-        modules={[Navigation, Autoplay]}
+        modules={[Navigation]}
         spaceBetween={24}
         slidesPerView={1}
         navigation
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
         breakpoints={{
           640: {
             slidesPerView: 2,
