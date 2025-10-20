@@ -22,7 +22,7 @@ export const courseDetails = {
   `,
   highlights: [
     { label: "Modalidade:", value: "Presencial" },
-    { label: "Carga horária:", value: "1.400 horas" },
+    { label: "Carga horária:", value: "1.400 horas / Duração 28 meses" },
     { label: "Unidades:", value: "Salvador • Feira de Santana • Aracaju" },
     { label: "Certificação:", value: "CTA" },
   ],
@@ -83,8 +83,16 @@ export const courseContent = {
 export const teacherInfo = {
   sectionTitle: "Sobre o Professor",
   teacherName: "Prof. Dr. Tiago Cadidé",
-  teacherDescription: `Cirurgião-dentista especialista em Implantodontia e Harmonização Orofacial, Mestre e Doutorando em Implantodontia. Com mais de 20 anos coordenando cursos de pós-graduação em todo o Brasil, é referência nacional na formação de especialistas.
-Palestrante em grandes congressos nacionais, desenvolveu metodologias exclusivas de ensino que combinam excelência técnica, base científica sólida e aplicação prática voltada para resultados previsíveis e duradouros.`,
+  teacherDescription: `Cirurgião-dentista especialista em Implantodontia e Harmonização Orofacial, Mestre e Doutorando em Implantodontia. Com mais de 20 anos coordenando cursos de pós-graduação na Bahia e Sergipe, é referência nacional na formação de especialistas. Palestrante em grandes congressos nacionais, desenvolveu metodologias exclusivas de ensino que demoninada = ensino reverso, com aplicação prática voltada para resultados previsíveis desde os primeiros módulos do curso.\n
+Graduado em Odontologia pela FBDC
+Especialista em Implantodontia – ABCD – SP.
+Especialisate em Prótese Dentaria – CTA – S.P.
+Especialisata em HOF – CTA- S.P.
+Mestre em Implantodontia – SLMnadic – S.P
+Doutor em Implantodontia  - SLMnadic – S.P
+Resindecia Implantodotiia – Boston EUA
+Prof. Uinivesitário + de 20 anos
+Coordewnador de Especialiscao + de 20 anos`,
   imagePlaceholderText: "FOTO TIAGO CADIDÉ",
   teacherImage: "/images/thiago-cadide.jpg",
   imageFile: "/images/thiago-cadide.jpg",

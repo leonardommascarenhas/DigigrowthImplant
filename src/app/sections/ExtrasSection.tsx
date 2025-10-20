@@ -29,9 +29,12 @@ const ExtrasSection = () => {
       title: "Diferenciais da Instituição",
       icon: FaBuilding,
       items: [
-        { icon: FaFlask, text: "Laboratórios equipados" },
-        { icon: FaBuilding, text: "Centro de treinamento" },
-        { icon: FaHandshake, text: "Parcerias" },
+        { icon: FaFlask, text: "Centro de treinamentro em fresh frozen" },
+        {
+          icon: FaBuilding,
+          text: "Kits cirurgicos, proteticos e motores fornecidos pelo curso",
+        },
+        { icon: FaHandshake, text: "Modulo em São Paulo (1 modulo)" },
       ],
     },
   ];
