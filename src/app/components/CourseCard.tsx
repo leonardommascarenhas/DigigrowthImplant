@@ -35,7 +35,7 @@ const CourseCard = ({ file, title, description, topics }: CourseCardProps) => {
 
       {/* Modal */}
       {showDescription && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-fadeIn text-justify">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-fadeIn">
           <div className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-4 p-6 animate-slideUp overflow-y-auto max-h-[90vh]">
             {/* Botão fechar */}
             <button

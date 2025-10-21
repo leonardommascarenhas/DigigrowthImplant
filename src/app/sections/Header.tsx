@@ -32,7 +32,7 @@ const Header = () => {
 
           <p
             className="
-    text-base sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl
+    text-sm sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl
     leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-[1.7] font-medium mb-10
   "
             dangerouslySetInnerHTML={{ __html: description }}

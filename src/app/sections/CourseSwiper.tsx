@@ -9,9 +9,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 interface Course {
+  title: string | null;
+  description: string | null;
   file: string;
-  title: string;
-  description: string;
   topics?: string[];
 }
 
