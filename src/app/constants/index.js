@@ -83,20 +83,22 @@ export const courseContent = {
 export const teacherInfo = {
   sectionTitle: "Sobre o Professor",
   teacherName: "Prof. Dr. Tiago Cadidé",
-  teacherDescription: `Cirurgião-dentista especialista em Implantodontia e Harmonização Orofacial, Mestre e Doutorando em Implantodontia. Com mais de 20 anos coordenando cursos de pós-graduação na Bahia e Sergipe, é referência nacional na formação de especialistas. Palestrante em grandes congressos nacionais, desenvolveu metodologias exclusivas de ensino que demoninada = ensino reverso, com aplicação prática voltada para resultados previsíveis desde os primeiros módulos do curso.\n
-Graduado em Odontologia pela FBDC
+  teacherDescription: `Cirurgião-dentista, especialista em Implantodontia e Harmonização Orofacial. Mestre e doutorando em Implantodontia. Com ampla experiência coordenando cursos de pós-graduação na Bahia e em Sergipe, é referência nacional na formação de especialistas. Palestrante em grandes congressos nacionais, desenvolveu metodologias exclusivas de ensino denominadas "ensino reverso", com aplicação prática voltada para resultados previsíveis desde os primeiros módulos do curso.
+
+Graduado em Odontologia pela FBDC.
 Especialista em Implantodontia – ABCD – SP.
-Especialisate em Prótese Dentaria – CTA – S.P.
-Especialisata em HOF – CTA- S.P.
-Mestre em Implantodontia – SLMnadic – S.P
-Doutor em Implantodontia  - SLMnadic – S.P
-Resindecia Implantodotiia – Boston EUA
-Prof. Uinivesitário + de 20 anos
-Coordewnador de Especialiscao + de 20 anos`,
+Especialista em Prótese Dentária – CTA – SP.
+Especialista em Harmonização Orofacial (HOF) – CTA – SP.
+Mestre em Implantodontia – SLmandic – SP.
+Doutorando em Implantodontia – SLmandic – SP.
+Residência em Implantodontia – Boston, EUA.
+Professor universitário + de 20 anos.
+Coordenador de especialização + de 20 anos.`,
   imagePlaceholderText: "FOTO TIAGO CADIDÉ",
   teacherImage: "/images/thiago-cadide.jpg",
   imageFile: "/images/thiago-cadide.jpg",
 };
+
 
 export const backstageInfo = {
   sectionTitle: "Bastidores e Resultados",

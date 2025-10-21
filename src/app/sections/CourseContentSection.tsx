@@ -63,7 +63,7 @@ const CourseContentSection = () => {
       title: "Prótese sobre Implantes",
       description:
         "Uma prótese sobre implante é uma solução odontológica que substitui um ou mais dentes perdidos fixando uma prótese em raízes artificiais (implantes) inseridas no osso. Existem diferentes tipos, como a prótese fixa (unitária ou múltipla), a protocolo (fixa, usando 4-6 implantes) e a overdenture (removível com encaixes). Elas oferecem maior estabilidade, segurança e naturalidade para mastigação, fala e estética em comparação com próteses convencionais. Durante curso o aluno vai desenvolver as habilidades e competências necessárias para realizar moldagens, prova de dentes, montagem em articular e entrega de próteses sobre implantes.",
-      file: "/images/CourseContentSection/11- proteses.png",
+      file: "/images/CourseContentSection/10- proteses.png",
     },
     {
       title: null,
@@ -129,6 +129,12 @@ const CourseContentSection = () => {
     },
   ];
 
+  const sortedCourses = [...courseDetails].sort((a, b) => {
+    if (a.description && !b.description) return -1;
+    if (!a.description && b.description) return 1;
+    return 0;
+  });
+
   return (
     <section className="relative px-4 pt-6 pb-28 lg:pb-48 text-cta-dark bg-[linear-gradient(to_bottom,var(--color-cta-secondary),var(--color-cta-third))]">
       <Curve type="convex" position="top" fill="#ffffff" height="60px" />
@@ -137,7 +143,7 @@ const CourseContentSection = () => {
         <Title title={courseContent.sectionTitle} color="text-white" />
       </div>
 
-      <CourseSwiper courses={courseDetails} />
+      <CourseSwiper courses={sortedCourses} />
     </section>
   );
 };
