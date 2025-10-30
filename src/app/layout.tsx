@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 const nunito = Nunito({
   variable: "--font-nunito",
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900"], // All Nunito weights
-  style: ["normal", "italic"], // Include both normal and italic styles
-  display: "swap", // Improves FOUT
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -34,42 +34,50 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* === CSS: Esconde barra, mas mantém scroll funcional === */}
         <style>{`
           .no-visible-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;     /* Firefox */
+            -ms-overflow-style: none;     /* IE and Edge */
+            scrollbar-width: none;        /* Firefox */
           }
           .no-visible-scrollbar::-webkit-scrollbar {
-            display: none !important;  /* Chrome, Safari, Opera */
+            display: none !important;     /* Chrome, Safari, Opera */
             width: 0 !important;
             height: 0 !important;
           }
-          /* Allow scrolling with mouse wheel and touch */
           .no-visible-scrollbar {
-            -webkit-overflow-scrolling: touch;
             overflow: auto !important;
+            -webkit-overflow-scrolling: touch;
           }
         `}</style>
+
+        {/* === JS: Comunicação com o iframe pai === */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Escuta comandos do pai
-              window.addEventListener('message', (event) => {
-                // Segurança: só aceita do domínio do pai (ajuste para o seu domínio real)
-                if (event.origin !== window.location.origin && event.origin !== 'http://localhost:3000') return; // Exemplo: permita localhost para dev
+              (function() {
+                // Domínios permitidos do pai
+                const allowedOrigins = [
+                  'https://ctasalvador.com.br',
+                  'http://localhost:8080'  // Dev
+                ];
 
-                if (event.data === 'HIDE_SCROLLBAR') {
-                  document.documentElement.classList.add('no-visible-scrollbar');
-                }
-                if (event.data === 'SHOW_SCROLLBAR') {
-                  document.documentElement.classList.remove('no-visible-scrollbar');
-                }
-              });
+                window.addEventListener('message', (event) => {
+                  if (!allowedOrigins.includes(event.origin)) return;
 
-              // Notifica o pai quando estiver pronto
-              if (window.parent !== window) {
-                window.parent.postMessage('IFRAME_READY', '*');
-              }
+                  if (event.data === 'HIDE_SCROLLBAR') {
+                    document.documentElement.classList.add('no-visible-scrollbar');
+                  }
+                  if (event.data === 'SHOW_SCROLLBAR') {
+                    document.documentElement.classList.remove('no-visible-scrollbar');
+                  }
+                });
+
+                // Só envia IFRA ME_READY se estiver dentro de um iframe
+                if (window.parent !== window) {
+                  window.parent.postMessage('IFRAME_READY', event.origin);
+                }
+              })();
             `,
           }}
         />
