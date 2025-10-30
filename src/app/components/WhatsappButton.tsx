@@ -19,7 +19,7 @@ export default function WhatsAppButton({ phone, message = "" }: WhatsAppButtonPr
       rel="noopener noreferrer"
       className="
         fixed 
-        bottom-5 
+        bottom-10 
         right-5 
         z-50 
         bg-green-500 
