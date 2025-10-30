@@ -55,30 +55,30 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function() {
-                // Domínios permitidos do pai
-                const allowedOrigins = [
-                  'https://ctasalvador.com.br',
-                  'http://localhost:8080'  // Dev
-                ];
+      (function() {
+        const allowedOrigins = [
+          'https://ctasalvador.com.br',
+          'http://localhost:8080'
+        ];
 
-                window.addEventListener('message', (event) => {
-                  if (!allowedOrigins.includes(event.origin)) return;
+        window.addEventListener('message', (event) => {
+          if (!allowedOrigins.includes(event.origin)) return;
 
-                  if (event.data === 'HIDE_SCROLLBAR') {
-                    document.documentElement.classList.add('no-visible-scrollbar');
-                  }
-                  if (event.data === 'SHOW_SCROLLBAR') {
-                    document.documentElement.classList.remove('no-visible-scrollbar');
-                  }
-                });
+          if (event.data === 'HIDE_SCROLLBAR') {
+            document.documentElement.classList.add('no-visible-scrollbar');
+          }
+          if (event.data === 'SHOW_SCROLLBAR') {
+            document.documentElement.classList.remove('no-visible-scrollbar');
+          }
+        });
 
-                // Só envia IFRA ME_READY se estiver dentro de um iframe
-                if (window.parent !== window) {
-                  window.parent.postMessage('IFRAME_READY', event.origin);
-                }
-              })();
-            `,
+        // Send ready message when loaded (if in iframe)
+        if (window.parent !== window) {
+          // FIX: Send to all allowed origins or use '*' for testing
+          window.parent.postMessage('IFRAME_READY', '*');
+        }
+      })();
+    `,
           }}
         />
       </head>
