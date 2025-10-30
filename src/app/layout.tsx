@@ -33,6 +33,47 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <style>{`
+          .no-visible-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;     /* Firefox */
+          }
+          .no-visible-scrollbar::-webkit-scrollbar {
+            display: none !important;  /* Chrome, Safari, Opera */
+            width: 0 !important;
+            height: 0 !important;
+          }
+          /* Allow scrolling with mouse wheel and touch */
+          .no-visible-scrollbar {
+            -webkit-overflow-scrolling: touch;
+            overflow: auto !important;
+          }
+        `}</style>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Escuta comandos do pai
+              window.addEventListener('message', (event) => {
+                // Segurança: só aceita do domínio do pai (ajuste para o seu domínio real)
+                if (event.origin !== window.location.origin && event.origin !== 'http://localhost:3000') return; // Exemplo: permita localhost para dev
+
+                if (event.data === 'HIDE_SCROLLBAR') {
+                  document.documentElement.classList.add('no-visible-scrollbar');
+                }
+                if (event.data === 'SHOW_SCROLLBAR') {
+                  document.documentElement.classList.remove('no-visible-scrollbar');
+                }
+              });
+
+              // Notifica o pai quando estiver pronto
+              if (window.parent !== window) {
+                window.parent.postMessage('IFRAME_READY', '*');
+              }
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} antialiased font-nunito`}>
         {children}
