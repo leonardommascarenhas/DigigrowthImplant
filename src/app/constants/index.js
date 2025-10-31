@@ -136,7 +136,7 @@ export const testimonials = [
     imgPath: "https://picsum.photos/100/100?random=5",
     name: "Helen Pereira",
     mentions: "Profissional de Estética",
-    review: "Participar do HOF Premium foi transformador! Aprendi muito com a Dra. Raissa e hoje tenho mais segurança na minha prática.",
+    review: "Participar do HOF basico & avançado foi transformador! Aprendi muito com a Dra. Raissa e hoje tenho mais segurança na minha prática.",
   },
   {
     imgPath: "https://picsum.photos/100/100?random=2",
