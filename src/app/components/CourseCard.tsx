@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
+import { createPortal } from "react-dom";
 
 interface CourseCardProps {
   file: string;
@@ -36,38 +37,46 @@ const CourseCard = ({ file, title, description, topics }: CourseCardProps) => {
         )}
       </div>
 
-      {/* Modal */}
-      {showDescription && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-fadeIn">
-          <div className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-4 p-6 animate-slideUp overflow-y-auto max-h-[90vh]">
-            {/* Botão fechar */}
-            <button
-              onClick={() => setShowDescription(false)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition">
-              <X size={24} />
-            </button>
+      {/* Modal com Portal para renderizar no body, garantindo que fique no centro da tela */}
+      {showDescription &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-fadeIn"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setShowDescription(false);
+            }}>
+            <div className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-4 p-6 animate-slideUp overflow-y-auto max-h-[90vh]">
+              {/* Botão fechar */}
+              <button
+                onClick={() => setShowDescription(false)}
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition">
+                <X size={24} />
+              </button>
 
-            {/* Conteúdo */}
-            <div className="space-y-4">
-              <h2 className="text-xl font-bold text-[#00134d]">{title}</h2>
-              <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                {description}
-              </p>
+              {/* Conteúdo */}
+              <div className="space-y-4">
+                <h2 className="text-xl font-bold text-[#00134d]">{title}</h2>
+                <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                  {description}
+                </p>
 
-              {topics.length > 0 && (
-                <div>
-                  <h3 className="text-lg font-semibold text-[#00134d] mt-4">Tópicos:</h3>
-                  <ul className="list-disc list-inside space-y-1 text-gray-700">
-                    {topics.map((topic, index) => (
-                      <li key={index}>{topic}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+                {topics.length > 0 && (
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#00134d] mt-4">
+                      Tópicos:
+                    </h3>
+                    <ul className="list-disc list-inside space-y-1 text-gray-700">
+                      {topics.map((topic, index) => (
+                        <li key={index}>{topic}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Animações */}
       <style jsx global>{`

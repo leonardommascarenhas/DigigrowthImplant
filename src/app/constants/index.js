@@ -1,18 +1,18 @@
 export const headerContent = {
-  backgroundImage: "https://via.placeholder.com/1200x600", // substitua por uma foto impactante
+  backgroundImage: "https://via.placeholder.com/1200x600",
   altText: "Faculdade CTA",
   title: `
-    <span class="block text-[1.7rem] font-extrabold">Especialização em</span>
-    <span class="block font-extrabold text-[1.8rem]">Implantodontia & Prótese Dentária</span>
-    <span class="block  font-semibold mt-1">Dupla Certificação</span>
+    <span class="block text-[1.35rem] md:text-[2.2rem] lg:text-[2.3rem]  2xl:text-[2.6rem] font-semibold md:font-extrabold mb-1 leading-snug md:leading-normal">Especialização em</span>
+    <span class="block text-[1.78rem] md:text-[2.1rem] lg:text-[2.7rem] 2xl:text-[3.5rem] font-extrabold leading-snug md:leading-normal mb-1">Implantodontia & <br class="2xl:hidden"/> Prótese Dentária</span>
   `,
   description: `
-    Formação presencial, completa e prática,<br/>
-    com certificação CTA e apenas <strong>12 vagas por turma</strong>.
+    <span class="block leading-relaxed md:leading-normal text-[1rem] md:text-[1.15rem] lg:text-[1.3rem] xl:text-[1.4rem] 2xl:text-[1.5rem]">Formação completa e prática,<br/>
+    certificação CTA com <strong>apenas 12 vagas</strong>.</span>
   `,
   ctaText: "Quero me inscrever agora",
   ctaLink: "#inscricao",
 };
+
 
 export const courseDetails = {
   sectionTitle: "Sobre o Curso",
@@ -117,7 +117,7 @@ export const backstageInfo = {
 
 export const studentTestimonials = {
   sectionTitle: "O que dizem nossos alunos",
-  testimonialText: "A experiência foi transformadora! Já saí preparada pra atender e atrair mais pacientes. Obrigada CTA e prof. Milena! – Ex-aluna",
+  testimonialText: "A experiência foi transformadora! Já saí preparada pra atender e atrair mais pacientes. Obrigada CTA e prof. Raissa! – Ex-aluna",
   videoPlaceholderText: "DEPOIMENTO EM VÍDEO OU TEXTO",
 };
 
@@ -136,7 +136,7 @@ export const testimonials = [
     imgPath: "https://picsum.photos/100/100?random=5",
     name: "Helen Pereira",
     mentions: "Profissional de Estética",
-    review: "Participar do HOF Premium foi transformador! Aprendi muito com a Dra. Milena e hoje tenho mais segurança na minha prática.",
+    review: "Participar do HOF Premium foi transformador! Aprendi muito com a Dra. Raissa e hoje tenho mais segurança na minha prática.",
   },
   {
     imgPath: "https://picsum.photos/100/100?random=2",
