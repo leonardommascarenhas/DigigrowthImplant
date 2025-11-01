@@ -59,7 +59,7 @@ const uniqueCourse = {
 
 const UniqueCourseSection = () => {
   return (
-    <section className="bg-white p-4 max-w-7xl mx-auto leading-none">
+    <section className="bg-white p-4 max-w-7xl mx-auto leading-none mb-12">
       <motion.div
         className="flex flex-col gap-8 mt-10"
         initial="hidden"
@@ -101,7 +101,7 @@ const UniqueCourseSection = () => {
               ) => (
                 <motion.div
                   key={index}
-                  className="flex items-start gap-4 bg-white border border-gray-200 rounded-xl shadow-sm px-6 py-5 hover:shadow-md transition-all duration-300"
+                  className="flex items-start gap-4 bg-white border border-gray-200 rounded-xl px-6 py-5 hover:shadow-2xl transition-all duration-300 shadow-xl"
                   variants={itemVariants}>
                   <div className="relative w-12 h-12 flex-shrink-0 mt-0.5">
                     <Image
