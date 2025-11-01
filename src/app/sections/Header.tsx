@@ -2,8 +2,8 @@ export const headerContent = {
   backgroundImage: "https://via.placeholder.com/1200x600",
   altText: "Faculdade CTA",
   title: `
-    <span class="block text-[1.35rem] md:text-[2.2rem] lg:text-[2.4rem] xl:text-[2.8rem] 2xl:text-[3.1rem] font-semibold md:font-extrabold mb-1 leading-snug md:leading-normal">Especialização em</span>
-    <span class="block text-[1.78rem] md:text-[2.1rem] lg:text-[3.2rem] xl:text-[3.6rem] 2xl:text-[4rem] font-extrabold leading-snug md:leading-normal mb-1">Implantodontia & <br class="hidden lg:block"/> Prótese Dentária</span>
+    <span class="block text-[1.33rem] md:text-[2.2rem] lg:text-[2.4rem] xl:text-[2.8rem] 2xl:text-[3.1rem] font-semibold md:font-extrabold mb-1 leading-snug md:leading-normal">Especialização em</span>
+    <span class="block text-[1.74rem] md:text-[2.1rem] lg:text-[3.2rem] xl:text-[3.6rem] 2xl:text-[4rem] font-extrabold leading-snug md:leading-normal mb-1">Implantodontia & <br class="hidden lg:block"/> Prótese Dentária</span>
   `,
   description: `
     <span class="block leading-relaxed md:leading-normal text-[1rem] md:text-[1.15rem] lg:text-[1.3rem] xl:text-[1.4rem] 2xl:text-[1.5rem]">Formação completa e prática,<br/>
