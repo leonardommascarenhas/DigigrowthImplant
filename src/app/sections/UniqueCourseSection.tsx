@@ -5,9 +5,7 @@ import Image from "next/image";
 
 const containerVariants: Variants = {
   hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.15 },
-  },
+  visible: { transition: { staggerChildren: 0.15 } },
 };
 
 const titleVariants: Variants = {
@@ -61,65 +59,64 @@ const UniqueCourseSection = () => {
   return (
     <section className="bg-white p-4 max-w-7xl mx-auto leading-none mb-12">
       <motion.div
-        className="flex flex-col gap-8 mt-10"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 items-start"
         initial="hidden"
         animate="visible"
         variants={containerVariants}>
-        {/* Título */}
-        <motion.h2
-          className="text-[1.78rem] md:text-4xl font-bold text-gray-800 text-center lg:text-left"
-          variants={titleVariants}>
-          O que torna essa <br />
-          <span className="block font-extrabold mt-0.5 text-gray-900">
-            formação única?
-          </span>
-        </motion.h2>
+        {/* Coluna Esquerda (imagem + título mobile) */}
+        <div className="flex flex-col gap-6">
+          {/* Título acima da imagem no mobile */}
+          <motion.h2
+            className="text-[1.78rem] md:text-4xl font-bold text-gray-800 text-center lg:hidden"
+            variants={titleVariants}>
+            O que torna essa <br />
+            <span className="block font-extrabold mt-0.5 text-gray-900">
+              formação única?
+            </span>
+          </motion.h2>
 
-        {/* Layout: Image Left + Items Right */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 mt-4 items-center lg:items-start">
-          {/* IMAGE ON LEFT */}
-          <motion.div className="w-full lg:w-[45%] flex-shrink-0" variants={itemVariants}>
-            <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src={uniqueCourse.mainImage}
-                alt="Course highlight"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 45vw"
-              />
-            </div>
-          </motion.div>
-
-          {/* ALL ITEMS ON RIGHT */}
+          {/* Imagem */}
           <motion.div
-            className="w-full lg:w-[55%] flex flex-col gap-5"
-            variants={containerVariants}>
-            {uniqueCourse.highlights.map(
-              (
-                item: { title: string; description: string; iconFile: string },
-                index: number
-              ) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start gap-4  border bg-[var(--color-cta-secondary)] border-gray-200 rounded-xl px-6 py-5 hover:shadow-2xl transition-all duration-300 shadow-xl"
-                  variants={itemVariants}>
-                  <div className="relative w-12 h-12 flex-shrink-0 mt-0.5">
-                    <Image
-                      src={item.iconFile}
-                      alt="Icon"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="text-white leading-relaxed flex-1">
-                    <p className=" mb-2  text-base lg:text-lg">{item.title}</p>
-                    <p className="text-white text-sm lg:text-base">{item.description}</p>
-                  </div>
-                </motion.div>
-              )
-            )}
+            className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-lg"
+            variants={itemVariants}>
+            <Image
+              src={uniqueCourse.mainImage}
+              alt="Course highlight"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+            />
           </motion.div>
         </div>
+
+        {/* Coluna Direita (título desktop + cards) */}
+        <motion.div className="flex flex-col gap-6" variants={containerVariants}>
+          <motion.h2
+            className="hidden lg:block text-4xl font-bold text-gray-800 text-left lg:mt-12"
+            variants={titleVariants}>
+            O que torna essa <br />
+            <span className="block font-extrabold mt-0.5 text-gray-900">
+              formação única?
+            </span>
+          </motion.h2>
+
+          <div className="flex flex-col gap-5">
+            {uniqueCourse.highlights.map((item, index) => (
+              <motion.div
+                key={index}
+                className="flex items-start gap-4 border bg-[var(--color-cta-secondary)] border-gray-200 rounded-xl px-6 py-5 hover:shadow-2xl transition-all duration-300 shadow-xl"
+                variants={itemVariants}>
+                <div className="relative w-12 h-12 flex-shrink-0 mt-0.5">
+                  <Image src={item.iconFile} alt="Icon" fill className="object-contain" />
+                </div>
+                <div className="text-white leading-relaxed flex-1">
+                  <p className="mb-2 text-base lg:text-lg">{item.title}</p>
+                  <p className="text-white text-sm lg:text-base">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );

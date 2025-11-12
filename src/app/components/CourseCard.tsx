@@ -41,7 +41,7 @@ const CourseCard = ({ file, title, description, topics }: CourseCardProps) => {
       {showDescription &&
         createPortal(
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-fadeIn"
+            className="text-justify fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-fadeIn"
             onClick={(e) => {
               if (e.target === e.currentTarget) setShowDescription(false);
             }}>

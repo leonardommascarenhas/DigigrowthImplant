@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <header
-      className="
+      className="text-left
         relative w-full h-[65vh] lg:h-screen
         bg-[url('/images/bannerPrincipalMobile.jpg')]
         md:bg-[url('/images/bannerpincipal.jpg')]
