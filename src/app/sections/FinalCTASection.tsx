@@ -45,7 +45,7 @@ const FinalCTASection = () => {
           {[
             { icon: FaCheckCircle, text: "Turmas reduzidas" },
             { icon: FaCheckCircle, text: "Atendimento personalizado" },
-            { icon: FaCheckCircle, text: "Prática desde o 1º dia" },
+            { icon: FaCheckCircle, text: "Prática nos primeiros modulos" },
           ].map((item, index) => (
             <div
               key={index}

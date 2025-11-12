@@ -124,7 +124,7 @@ export const studentTestimonials = {
 export const enrollmentInfo = {
   sectionTitle: "Investimento e Matrícula",
   price: "R$ 2.600,00",
-  paymentMethods: "Pix ou Cartão (até 6x)",
+  paymentMethods: "Pix, boleto e cartão", 
   limitedSpots: "apenas 6 por turma",
   urgencyText: "Garanta sua vaga enquanto há tempo!",
   whatsappLink: "https://wa.me/SEUNUMEROAQUI",

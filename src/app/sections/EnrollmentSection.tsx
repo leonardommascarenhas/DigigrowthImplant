@@ -8,7 +8,7 @@ const EnrollmentSection = () => {
     matricula: "R$ 200",
     valorCurso: "R$ 1.600",
     promocao: "R$ 1.200 até 5º dia útil",
-    formasPagamento: "todas",
+    formasPagamento: "Pix, boleto e cartão",
     vagasLimitadas: "apenas 12 por turma",
   };
 

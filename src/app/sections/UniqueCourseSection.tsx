@@ -101,7 +101,7 @@ const UniqueCourseSection = () => {
               ) => (
                 <motion.div
                   key={index}
-                  className="flex items-start gap-4 bg-white border border-gray-200 rounded-xl px-6 py-5 hover:shadow-2xl transition-all duration-300 shadow-xl"
+                  className="flex items-start gap-4  border bg-[var(--color-cta-secondary)] border-gray-200 rounded-xl px-6 py-5 hover:shadow-2xl transition-all duration-300 shadow-xl"
                   variants={itemVariants}>
                   <div className="relative w-12 h-12 flex-shrink-0 mt-0.5">
                     <Image
@@ -111,13 +111,9 @@ const UniqueCourseSection = () => {
                       className="object-contain"
                     />
                   </div>
-                  <div className="text-gray-800 leading-relaxed flex-1">
-                    <p className="font-bold mb-2 text-gray-900 text-base lg:text-lg">
-                      {item.title}
-                    </p>
-                    <p className="text-gray-600 text-sm lg:text-base">
-                      {item.description}
-                    </p>
+                  <div className="text-white leading-relaxed flex-1">
+                    <p className=" mb-2  text-base lg:text-lg">{item.title}</p>
+                    <p className="text-white text-sm lg:text-base">{item.description}</p>
                   </div>
                 </motion.div>
               )

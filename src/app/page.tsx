@@ -15,7 +15,7 @@ import FinalCTASection from "./sections/FinalCTASection";
 export default function Home() {
   return (
     <>
-      <div className="w-screen">
+      <div className="w-screen text-justify">
         <Header />
         <CourseDetails />
         {/* <TargetAudience /> */}
