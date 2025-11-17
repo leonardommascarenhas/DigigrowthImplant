@@ -1,12 +1,14 @@
+import React from "react";
 import BlueButton from "../components/BlueButton";
 
 export const headerContent = {
   backgroundImage: "https://via.placeholder.com/1200x600",
   altText: "Faculdade CTA",
   title: `
-    <span class="block text-[1.1rem] md:text-[2.2rem] lg:text-[2.4rem] xl:text-[2.8rem] 2xl:text-[3.1rem] font-semibold md:font-extrabold mb-1 leading-snug md:leading-normal">Especialização em</span>
-    <span class="block text-[1.45rem] md:text-[2.1rem] lg:text-[3.2rem] xl:text-[3.6rem] 2xl:text-[4rem] font-extrabold leading-snug md:leading-normal mb-1">Implantodontia & <br class="hidden lg:block"/> Prótese Dentária</span>
-  `,
+  <span class="block text-[1.1rem] md:text-[2.2rem] font-semibold md:font-extrabold mb-1 leading-[1.05] md:leading-[0.95]">Especialização em</span>
+  <span class="block text-[1.45rem] md:text-[2.1rem] lg:text-[3.2rem] xl:text-[3.6rem] 2xl:text-[4rem] font-extrabold leading-[1.1] md:leading-[0.95] mb-1 text-white">Implantodontia & <br class="hidden lg:block"/> Prótese Dentária</span>
+`,
+
   description: `
     <span class="block leading-relaxed md:leading-normal text-[0.85rem] md:text-[1.15rem] lg:text-[1.3rem] xl:text-[1.4rem] 2xl:text-[1.5rem]">Formação completa e prática,<br/>
     certificação CTA com <strong>apenas 12 vagas</strong>.</span>
@@ -48,11 +50,11 @@ const Header = () => {
           ">
           <h1
             className="
-              text-[1.4rem] leading-tight 
+              text-[1.4rem] 
               sm:text-4xl 
               md:text-5xl 
               lg:text-[3.6rem] xl:text-[3.8rem] 2xl:text-[4rem]
-              font-bold tracking-tight sm:leading-tight md:leading-tight lg:leading-tight 
+              font-bold tracking-tight leading-[1.1] md:leading-[0.95] lg:leading-[0.9]
               mb-4 md:mb-6 lg:mb-8 drop-shadow-lg
               lg:max-w-[620px]
             "

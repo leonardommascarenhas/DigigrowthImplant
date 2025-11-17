@@ -57,7 +57,7 @@ const uniqueCourse = {
 
 const UniqueCourseSection = () => {
   return (
-    <section className="bg-white p-4 max-w-7xl mx-auto leading-none mb-12">
+    <section className="bg-white p-4 max-w-7xl mx-auto leading-none mb-12 text-left ">
       <motion.div
         className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 items-start"
         initial="hidden"
@@ -110,7 +110,7 @@ const UniqueCourseSection = () => {
                   <Image src={item.iconFile} alt="Icon" fill className="object-contain" />
                 </div>
                 <div className="text-white leading-relaxed flex-1">
-                  <p className="mb-2 text-base lg:text-lg">{item.title}</p>
+                  <p className="font-bold mb-2 text-base lg:text-lg">{item.title}</p>
                   <p className="text-white text-sm lg:text-base">{item.description}</p>
                 </div>
               </motion.div>
