@@ -132,40 +132,32 @@ export const enrollmentInfo = {
 };
 
 export const testimonials = [
-  {
-    imgPath: "https://picsum.photos/100/100?random=5",
-    name: "Helen Pereira",
-    mentions: "Profissional de Estética",
-    review: "Participar do HOF basico & avançado foi transformador! Aprendi muito com a Dra. Raissa e hoje tenho mais segurança na minha prática.",
-  },
-  {
-    imgPath: "https://picsum.photos/100/100?random=2",
-    name: "Lucas Mendes",
-    mentions: "Enfermeiro no Hospital Central",
-    review: "Esse curso transformou minha prática clínica. A melhor decisão da minha carreira!",
-  },
-  {
-    imgPath: "https://picsum.photos/100/100?random=3",
-    name: "Beatriz Lima",
-    mentions: "Especialista em Estética na Beleza Pura",
-    review: "Aprendi técnicas avançadas que fizeram meu negócio de estética decolar. Incrível!",
-  },
-  {
-    imgPath: "https://picsum.photos/100/100?random=4",
-    name: "Rafaela Sousa",
-    mentions: "Farmacêutica na Drogaria Saúde",
-    review: "O curso trouxe um diferencial enorme para minha atuação no mercado. Recomendo muito!",
-  },
-  {
-    imgPath: "https://picsum.photos/100/100?random=4",
-    name: "Rafaela Sousa",
-    mentions: "Farmacêutica na Drogaria Saúde",
-    review: "O curso trouxe um diferencial enorme para minha atuação no mercado. Recomendo muito!",
-  },
-  {
-    imgPath: "https://picsum.photos/100/100?random=4",
-    name: "Rafaela Sousa",
-    mentions: "Farmacêutica na Drogaria Saúde",
-    review: "O curso trouxe um diferencial enorme para minha atuação no mercado. Recomendo muito!",
-  },
+    {
+      nome: "Dra. Luciana pedra",
+      profissao: "Esteta",
+      texto:
+        "Professores maravilhosos, aulas práticas com professores muito pacientes. Simplesmente incrível!",
+      avaliacao: 5,
+    },
+    {
+      nome: "Dr. Pedro Junior",
+      profissao: "Cirurgião-Dentista",
+      texto:
+        "O curso de implante e prótese é sensacional, recomendo a todos que venham e se tornem especialistas em implante.",
+      avaliacao: 5,
+    },
+    {
+      nome: "Dra. Lanna Lorrany",
+      profissao: "",
+      texto:
+        "Muitos pacientes modelos, com as diversas práticas está agregando bastante na nossa carreira para poder oferecer a nossos clientes qualidade!",
+      avaliacao: 5,
+    },
+    {
+      nome: "Dra. Alana",
+      profissao: "Fisioterapeuta",
+      texto:
+        "Estou amando a CTA, estrutura maravilhosa!! Vale muito a pena o investimento, vocês vão amar!",
+      avaliacao: 5,
+    },
 ];
