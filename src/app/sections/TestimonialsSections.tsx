@@ -37,6 +37,20 @@ const testimonials: Testimonial[] = [
       "Estou amando a CTA, estrutura maravilhosa!! Vale muito a pena o investimento, vocês vão amar!",
     avaliacao: 5,
   },
+  {
+    nome: "Dr. Roberto Silva",
+    profissao: "Implantodontista",
+    texto:
+      "A didática dos professores e a quantidade de prática disponível superou todas as minhas expectativas. Recomendo demais!",
+    avaliacao: 5,
+  },
+  {
+    nome: "Dra. Camila Santos",
+    profissao: "Odontologista",
+    texto:
+      "Investimento que realmente vale a pena! A estrutura é impecável e o aprendizado é contínuo. Estou muito satisfeita com os resultados.",
+    avaliacao: 5,
+  },
 ];
 const TestimonialsSection = () => {
   return (
