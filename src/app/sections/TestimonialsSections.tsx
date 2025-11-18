@@ -56,8 +56,8 @@ const TestimonialsSection = () => {
   return (
     <section
       id="testimonials"
-      className="flex justify-center items-center bg-cta-lightblue min-h-screen">
-      <div className="w-full h-full md:px-10 px-5 py-10">
+      className="flex justify-center items-center bg-cta-lightblue py-10">
+      <div className="w-full h-full md:px-10 px-5">
         <Title title="Depoimentos" />
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 pt-10">
           {testimonials.map((testimonial: Testimonial, idx: number) => (
