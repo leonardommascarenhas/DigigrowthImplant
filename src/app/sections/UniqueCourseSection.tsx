@@ -67,12 +67,10 @@ const UniqueCourseSection = () => {
         <div className="flex flex-col gap-6">
           {/* Título acima da imagem no mobile */}
           <motion.h2
-            className="text-[1.78rem] md:text-4xl font-bold text-gray-800 text-center lg:hidden"
+            className="text-[1.78rem] md:text-4xl font-bold text-cta-third text-center lg:hidden"
             variants={titleVariants}>
             O que torna essa <br />
-            <span className="block font-extrabold mt-0.5 text-gray-900">
-              formação única?
-            </span>
+            <span className="block font-extrabold mt-0.5">formação única?</span>
           </motion.h2>
 
           {/* Imagem */}
@@ -92,12 +90,10 @@ const UniqueCourseSection = () => {
         {/* Coluna Direita (título desktop + cards) */}
         <motion.div className="flex flex-col gap-6" variants={containerVariants}>
           <motion.h2
-            className="hidden lg:block text-4xl font-bold text-gray-800 text-left lg:mt-12"
+            className="hidden lg:block text-4xl font-bold text-cta-third text-left lg:mt-12"
             variants={titleVariants}>
             O que torna essa <br />
-            <span className="block font-extrabold mt-0.5 text-gray-900">
-              formação única?
-            </span>
+            <span className="block font-extrabold mt-0.5">formação única?</span>
           </motion.h2>
 
           <div className="flex flex-col gap-5">

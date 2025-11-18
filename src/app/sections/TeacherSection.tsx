@@ -8,7 +8,7 @@ import Curve from "../components/Curve";
 const TeacherSection = () => {
   return (
     <section
-      className="relative px-4 md:px-8 pt-8 pb-24 lg:pt-0 lg:pb-12 text-cta-third"
+      className="relative px-4 md:px-8 pt-8  lg:pt-0 lg:pb-12 text-cta-third"
       style={{ backgroundColor: "var(--color-cta-lightblue)", zIndex: 20 }}>
       <Curve type="concave" position="top" fill="#d6ebfc" height="100px" />
 
